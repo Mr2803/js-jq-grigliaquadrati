@@ -28,42 +28,43 @@ $(document).ready(function () {
        //se il punteggio dei rossi è più alto di 14 allora non verranno più generati rossi
             if(punteggioR >= 14){
                 $(this).addClass("green");
-                if(punteggioG < 20){
+                if(punteggioG < 15){
                     if (!alert('Complimenti hai vinto, premi OK per un\'altra partita')) { 
                         window.location.reload(); }
                 }
             } else{
                 $(this).addClass(classes[Math.floor(Math.random() * classes.length)]);
                 
-                if(punteggioG >= 19){
+                if(punteggioG >= 14){
                     if (!alert('Mi dispiace hai perso , premi OK per un\'altra partita')) { window.location.reload(); }
                 }
             }
-        console.log("questa è la lunghezza di classes.length" + classes.length)     
+        /* console.log("questa è la lunghezza di classes.length" + classes.length)      */
             
    
        //imposto la condizione SE ha classe RED allora ...
         if (redOrNot.hasClass("red")){
-            redOrNot.css("background", "#CD4747")/* .fadeOut(1000).fadeIn() */;
+            redOrNot.css("background", "#CD4747");
                 redOrNot.off();
                 punteggioR++;
             $('#punteggioR').fadeOut(500).text(punteggioR).fadeIn(500).css("color","#CD4747"); 
+            console.log("punteggio rosso" + punteggioR)
+
         //altrimenti ...
        } else{
-            redOrNot.fadeIn().css("background", "#3DA042")/* fadeOut(1).fadeIn(function(){
-                    $(this).html("<span>X</span>").css(
-                        "background-color", "white",
-                        "font-size", "100%")
-                }); */
+            redOrNot.fadeIn().css("background", "#3DA042");
                 punteggioG++;
                 redOrNot.off();
                 
             $('#punteggioG').fadeOut(500).text(punteggioG).fadeIn(500).css("color", "#3DA042"); 
+            console.log("punteggio verde" + punteggioG)
              }
 
        
     });
 
+   
+   
 
 
 
