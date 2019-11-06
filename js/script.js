@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
     var punteggio = 0;
-
+    var inner = document.getElementById("punteggio");
 $(".red").click(function (){
-    $(this).css("background" , "red")
+    $(this).css("background" , "red");
     
     punteggio ++;
-    document.getElementById("punteggio").innerHTML =  punteggio;
+    inner.innerHTML =  punteggio;
 });
 
-$(".green").click(function (){
-    $(this).css("background" , "green")
+$(". ").click(function (){
+    $(this).css("background" , " ")
 });
 
 
