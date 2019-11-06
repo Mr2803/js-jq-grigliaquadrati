@@ -19,18 +19,21 @@
 .preGame button{
   color:white;
   font-size: 1.5rem;
-  padding:5px;
+  padding:10px;
   border-radius: 10px;
   margin-top:20px;
   text-align: center !important;
+  cursor:pointer;
+}
+
+.preGame button:hover{
+  color:#CD4747;
 }
 
 ul,h2{
   font-size: 1.5rem;
   text-align: left;
 }
-
-
 
 .global{
   display:none;
