@@ -8,8 +8,11 @@ $(document).ready(function () {
         
     })
 
-    for(var i=0;i<64;i++){
-        $(".grid-container").append("<div class=\"grid-item\"></div>")
+    //genero un ciclo for per stampare in pagina i div
+    for(var i=0; i<64; i++){
+       
+        $(".grid-container").append("<div class=\"grid-item\"></div>");
+
     }
 
     //imposto una var punteggio a 0 che aumenta se viene trovato un quadratino rosso
@@ -30,7 +33,7 @@ $(document).ready(function () {
                 $(this).addClass("green");
                 /* per vincere non basta la condizione che il punteggio dei rossi sia arrivato a 15 ma deve arrivarci PRIMA dei verdi , per cui pongo un iF punteggioG < 15 */
                 if(punteggioG < 15){
-                    /* se entrambe le condizioni sono state rispettate faccio partire un alert che avvisa l'utente di aver vinto e pongo una condizione su quest'ultimo dove se alert...(CHIEDI A SIMONE/NIKOLAS)  */
+                    /* se entrambe le condizioni sono state rispettate faccio partire un alert che avvisa l'utente di aver vinto e pongo una condizione su quest'ultimo dove se alert...(CHIEDI A NIKO/SIMO)  */
                     if (!alert('Complimenti hai vinto, premi OK per un\'altra partita')) { 
                         window.location.reload(); }
                 }
