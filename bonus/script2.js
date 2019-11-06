@@ -3,8 +3,8 @@
 $(document).ready(function () {
 
     $("button").click(function (){
-        $(".global").fadeIn(500);
-        $(this).parents(".preGame").fadeOut(500);
+        $(".global").fadeIn(1000);
+        $(this).parents(".preGame").fadeOut(100);
         
     })
 
