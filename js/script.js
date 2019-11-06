@@ -15,6 +15,7 @@ $(document).ready(function () {
        //imposto la condizione SE ha classe RED allora ...
         if (redOrNot.hasClass("red")){
             redOrNot.css("background", "red");
+            redOrNot.off();
             punteggioR++;
             inner.innerHTML = punteggioR;
         //altrimenti ...
@@ -22,6 +23,7 @@ $(document).ready(function () {
             redOrNot.css("background", "green ")
             punteggioG++;
             inner2.innerHTML = punteggioG;
+            redOrNot.off();
        }
 
        
