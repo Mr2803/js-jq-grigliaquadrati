@@ -2,11 +2,15 @@
 
 $(document).ready(function () {
 
+    $("button").click(function (){
+        $(".global").fadeIn(500);
+        $(this).parents(".preGame").fadeOut(500);
+        
+    })
+
     //imposto una var punteggio a 0 che aumenta se viene trovato un quadratino rosso
     var punteggioR = 0;
     var punteggioG = 0;
-    var inner = document.getElementById("punteggioR");
-    var inner2 = document.getElementById("punteggioG");
     var classes = ["red","green"];
     
 
@@ -24,7 +28,7 @@ $(document).ready(function () {
        //se il punteggio dei rossi è più alto di 14 allora non verranno più generati rossi
             if(punteggioR >= 14){
                 $(this).addClass("green");
-                if(punteggioG <= 20){
+                if(punteggioG < 20){
                     if (!alert('Complimenti hai vinto, premi OK per un\'altra partita')) { 
                         window.location.reload(); }
                 }
@@ -40,21 +44,22 @@ $(document).ready(function () {
    
        //imposto la condizione SE ha classe RED allora ...
         if (redOrNot.hasClass("red")){
-            redOrNot.css("background", "red")/* .fadeOut(1000).fadeIn() */;
+            redOrNot.css("background", "#CD4747")/* .fadeOut(1000).fadeIn() */;
                 redOrNot.off();
                 punteggioR++;
-                inner.innerHTML = punteggioR;
+            $('#punteggioR').fadeOut(500).text(punteggioR).fadeIn(500).css("color","#CD4747"); 
         //altrimenti ...
        } else{
-                redOrNot.fadeIn().css("background", "green")/* fadeOut(1).fadeIn(function(){
+            redOrNot.fadeIn().css("background", "#3DA042")/* fadeOut(1).fadeIn(function(){
                     $(this).html("<span>X</span>").css(
                         "background-color", "white",
                         "font-size", "100%")
                 }); */
                 punteggioG++;
-                inner2.innerHTML = punteggioG;
                 redOrNot.off();
-       }
+                
+            $('#punteggioG').fadeOut(500).text(punteggioG).fadeIn(500).css("color", "#3DA042"); 
+             }
 
        
     });
@@ -63,12 +68,6 @@ $(document).ready(function () {
 
 
     /* console.log(punteggio) */
-
-
-
-
-
-
 
 
 });

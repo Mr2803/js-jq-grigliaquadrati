@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <p>Il tuo punteggio attuale(ROSSI) è : <span id="punteggioR">0</span></p>
-    <p>Il tuo punteggio attuale(VERDI) è : <span id="punteggioG">0</span></p>
+    <div class="preGame">
+        <p>Ti presento il mio nuovo gioco</p>
+        <ul>
+            <li>Regole</li>
+            <li>L'abilità conta poco in questo gioco , conta solo la FORTUNA.</li>
+            <li>Giocherai 1 vs 1 con il pc .</li>
+            <li>Ti verrà mostrata una griglia , ad ogni click l'elemento cliccato si colorerà di rosso o di verde.</li>
+            <li>Se riuscirai ad individuare 15 quadrati rossi prima di aver trovato 20 quadrati verdi , la vittoria sarà tua</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <button>Cliccami per giocare</button>
+        </ul>
+
+    </div>
+    <div class="global">
+    <div class="my_score">
+    <p>ROSSI TROVATI  : </p>
+    <span id="punteggioR">0</span>
+    </div>
+    
 <div class="grid-container">
     <div class="grid-item  "></div>
     <div class="grid-item "></div>
@@ -76,7 +97,12 @@
     <div class="grid-item  "></div>
     <div class="grid-item  "></div>
 </div>
+<div class="my_score">
+    <p>Punteggio PC: </p>
+    <span id="punteggioG">0</span>
+</div>
 
+</div>
 
 
 
