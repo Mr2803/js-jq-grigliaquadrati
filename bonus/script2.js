@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
     $("button").click(function (){
-        $(".global").fadeIn(1000);
+        $(".global").fadeIn(1500);
         $(this).parents(".preGame").fadeOut(100);
         
     })
@@ -48,7 +48,7 @@ $(document).ready(function () {
                 redOrNot.off();
                 punteggioR++;
             $('#punteggioR').fadeOut(500).text(punteggioR).fadeIn(500).css("color","#CD4747"); 
-            console.log("punteggio rosso" + punteggioR)
+            console.log("punteggio rosso" + punteggioR)//debug
 
         //altrimenti ...
        } else{
@@ -57,18 +57,11 @@ $(document).ready(function () {
                 redOrNot.off();
                 
             $('#punteggioG').fadeOut(500).text(punteggioG).fadeIn(500).css("color", "#3DA042"); 
-            console.log("punteggio verde" + punteggioG)
+            console.log("punteggio verde" + punteggioG)//debug
              }
 
        
     });
-
-   
-   
-
-
-
-    /* console.log(punteggio) */
 
 
 });
