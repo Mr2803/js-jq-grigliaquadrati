@@ -6,7 +6,7 @@ $(".red").click(function (){
     $(this).css("background" , "red")
     
     punteggio ++;
-    console.log(punteggio)
+    document.getElementById("punteggio").innerHTML =  punteggio;
 });
 
 $(".green").click(function (){
